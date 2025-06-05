@@ -5,7 +5,8 @@ if (!is_dir($base)) mkdir($base, 0777, true);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $urun_kodu = $_POST['urun_kodu'];
     $uzanti = strtolower($_POST['uzanti']);
-    if (isset($_FILES['dosya']) && $_FILES['dosya']['error'] === 0) {
+    $allowed = ['pdf','dxf','x_t','xt','jpg','jpeg','png','bmp','webp'];
+    if (in_array($uzanti, $allowed) && isset($_FILES['dosya']) && $_FILES['dosya']['error'] === 0) {
         $altklasor = $base . $uzanti . '/';
         if (!is_dir($altklasor)) mkdir($altklasor, 0777, true);
         $dosya_adi = $urun_kodu . '.' . $uzanti;

@@ -4,6 +4,7 @@ $base = __DIR__ . '/../../../assets/urunler/';
 $msg = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['dosyalar'])) {
     $dosyalar = $_FILES['dosyalar'];
+    $allowed = ['pdf','dxf','x_t','xt','jpg','jpeg','png','bmp','webp'];
     $basari = 0; $hata = 0;
     for ($i=0; $i < count($dosyalar['name']); $i++) {
         if ($dosyalar['error'][$i] === 0) {
@@ -11,6 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['dosyalar'])) {
             if (preg_match('/^([a-zA-Z0-9_-]+)\.([a-zA-Z0-9]+)$/', $isim, $m)) {
                 $urun_kodu = $m[1];
                 $uzanti = strtolower($m[2]);
+                if (!in_array($uzanti, $allowed)) {
+                    $hata++;
+                    continue;
+                }
                 $hedef_klasor = $base . $uzanti . '/';
                 if (!is_dir($hedef_klasor)) mkdir($hedef_klasor, 0777, true);
                 $hedef_yol = $hedef_klasor . $urun_kodu . '.' . $uzanti;
