@@ -11,11 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Çoklu dosya yükleme
     if (isset($_FILES['yeni_dosyalar'])) {
         $count = count($_FILES['yeni_dosyalar']['name']);
+        $allowed = ['pdf','dxf','x_t','xt','jpg','jpeg','png','bmp','webp'];
         $basari = 0; $hata = 0;
         for($i=0;$i<$count;$i++) {
             if ($_FILES['yeni_dosyalar']['error'][$i] === 0) {
                 $ad = basename($_FILES['yeni_dosyalar']['name'][$i]);
                 $ext = strtolower(pathinfo($ad, PATHINFO_EXTENSION));
+                if (!in_array($ext, $allowed)) { $hata++; continue; }
                 $hedef_klasor = $base_dir . $ext . '/';
                 if (!is_dir($hedef_klasor)) mkdir($hedef_klasor, 0777, true);
                 $hedef_yol = $hedef_klasor . $urun_kodu . '.' . $ext;
