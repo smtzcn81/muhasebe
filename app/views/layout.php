@@ -24,6 +24,12 @@
         <li class="nav-item">
           <a class="nav-link" href="/app/home/projects/">Projeler</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/app/home/sales/">Satış</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/app/home/purchase/">Satınalma</a>
+        </li>
       </ul>
     </div>
   </div>

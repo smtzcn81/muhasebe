@@ -39,5 +39,7 @@ CREATE TABLE `projects` (
 - **Ürünler:** `app/home/urunler/` klasöründeki dosyalar.
 - **Müşteriler:** `app/home/customers/` klasöründeki dosyalar.
 - **Projeler:** `app/home/projects/` klasöründeki dosyalar.
+- **Satış Yönetimi:** `app/home/sales/` altında `offers`, `orders`, `irsaliyeler` ve `invoices` modülleri.
+- **Satınalma Yönetimi:** `app/home/purchase/` altında `offers`, `orders` ve `invoices` modülleri.
 
 Bu modüller Bootstrap tabanlı basit CRUD işlemleri gerçekleştirir.
