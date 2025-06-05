@@ -31,6 +31,24 @@ ob_start();
             </div>
         </div>
     </div>
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+                <h5 class="card-title">Satış Yönetimi</h5>
+                <p class="card-text">Teklif, sipariş, irsaliye ve fatura işlemleri.</p>
+                <a href="sales/" class="btn btn-primary mt-auto">Satış Modülü</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+                <h5 class="card-title">Satınalma Yönetimi</h5>
+                <p class="card-text">Teklif, sipariş ve fatura süreçleri.</p>
+                <a href="purchase/" class="btn btn-primary mt-auto">Satınalma Modülü</a>
+            </div>
+        </div>
+    </div>
 </div>
 <?php
 $content = ob_get_clean();
