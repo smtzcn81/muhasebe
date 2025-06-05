@@ -22,6 +22,15 @@ ob_start();
             </div>
         </div>
     </div>
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+                <h5 class="card-title">Projeler</h5>
+                <p class="card-text">Projelerinizi yönetin ve takip edin.</p>
+                <a href="projects/" class="btn btn-primary mt-auto">Projelere Git</a>
+            </div>
+        </div>
+    </div>
 </div>
 <?php
 $content = ob_get_clean();
