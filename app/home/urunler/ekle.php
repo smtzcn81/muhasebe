@@ -86,7 +86,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div class="row mb-2">
                 <div class="col-md-6"><label class="form-label">Müşteri Kodu</label><input type="text" name="musteri_kodu" class="form-control"></div>
-                <div class="col-md-6"><label class="form-label">Birim</label><input type="text" name="birim" class="form-control"></div>
             </div>
             <div class="row mb-2">
                 <div class="col-md-6"><label class="form-label">Satış Fiyatı</label><input type="number" step="0.01" name="satis_fiyati" class="form-control"></div>
@@ -128,7 +127,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="col-md-3"><label class="form-label">Net Ağırlık (kg)</label><input type="number" step="0.001" name="net_agirlik" class="form-control"></div>
                 <div class="col-md-3"><label class="form-label">Brüt Ağırlık (kg)</label><input type="number" step="0.001" name="brut_agirlik" class="form-control"></div>
                 <div class="col-md-3"><label class="form-label">Paket Ağırlık (kg)</label><input type="number" step="0.001" name="paket_agirlik" class="form-control"></div>
-                <div class="col-md-3"><label class="form-label">Ağırlık (gr)</label><input type="number" step="1" name="agirlik" class="form-control"></div>
             </div>
             <div class="row mb-2">
                 <div class="col-md-3"><label class="form-label">En (mm)</label><input type="number" step="0.01" name="boyut_en" class="form-control"></div>
@@ -138,7 +136,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div class="row mb-2">
                 <div class="col-md-6"><label class="form-label">Hacim (cm³)</label><input type="number" step="0.01" name="boyut_hacim" class="form-control"></div>
-                <div class="col-md-6"><label class="form-label">Parça Boyut (mm)</label><input type="number" step="0.01" name="parca_boyut" class="form-control"></div>
             </div>
             <div class="row mb-2">
                 <div class="col-md-6"><label class="form-label">Resim Dosya Adı</label><input type="text" name="resim" class="form-control" placeholder="Otomatik yükleme ile geliyorsa doldurmayın"></div>
