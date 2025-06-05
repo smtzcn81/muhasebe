@@ -32,6 +32,65 @@ CREATE TABLE `projects` (
   `bitis_tarihi` date DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
+CREATE TABLE `sales_offers` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(255) NOT NULL,
+  `aciklama` text,
+  `tarih` date DEFAULT NULL,
+  `tutar` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `sales_orders` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(255) NOT NULL,
+  `tarih` date DEFAULT NULL,
+  `durum` varchar(100) DEFAULT NULL,
+  `tutar` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `sales_irsaliyeler` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(255) NOT NULL,
+  `tarih` date DEFAULT NULL,
+  `aciklama` text,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `sales_invoices` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(255) NOT NULL,
+  `tarih` date DEFAULT NULL,
+  `tutar` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `purchase_offers` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(255) NOT NULL,
+  `aciklama` text,
+  `tarih` date DEFAULT NULL,
+  `tutar` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `purchase_orders` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(255) NOT NULL,
+  `tarih` date DEFAULT NULL,
+  `durum` varchar(100) DEFAULT NULL,
+  `tutar` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `purchase_invoices` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(255) NOT NULL,
+  `tarih` date DEFAULT NULL,
+  `tutar` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
 ```
 
 ## Modüller
